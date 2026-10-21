@@ -1,4 +1,4 @@
-# Asali ❤️
+# For_Princess — Asali
 
 یک تجربه‌ی تعاملی و عاشقانه‌ی فارسی، ساخته‌شده با React و Vite.
 
