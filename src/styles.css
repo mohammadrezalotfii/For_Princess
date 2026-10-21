@@ -381,7 +381,7 @@ button { touch-action: manipulation; }
 @media (max-width: 699px) {
   html, body, #root { height: 100%; overflow: hidden; overscroll-behavior: none; }
   .screen { height: var(--app-height, 100dvh); grid-template-rows: minmax(0, 1fr); min-height: 0; overflow: hidden; padding: max(12px, env(safe-area-inset-top)) 14px max(12px, env(safe-area-inset-bottom)); }
-  .welcome-screen, .question-screen { align-items: center; padding-block: max(112px, env(safe-area-inset-bottom)); }
+  .welcome-screen, .question-screen { align-items: center; padding-top: max(12px, env(safe-area-inset-top)); padding-bottom: max(12px, env(safe-area-inset-bottom)); }
   .welcome-card, .quiz-shell { transform-origin: center; }
   .tulip { width: 8vw; max-width: 38px; }
   .welcome-card, .quiz-shell, .secret-content, .confession-content { min-width: 0; width: 100%; }
@@ -571,6 +571,20 @@ button:not(.mascot-button)::after {
   .confession-screen .love-declaration h1 { font-size: clamp(1.9rem, 8vw, 2.6rem); }
   .confession-screen .hidden-ending { padding: 20px 16px; }
   .hidden-ending footer { font-size: .75rem; line-height: 1.6; }
+}
+@media (max-width: 699px) {
+  .compact-layout .question-card { padding: 12px 14px; }
+  .compact-layout .question-card h2 { font-size: 1.06rem; line-height: 1.6; margin: 10px 0 12px; }
+  .compact-layout .answer-option { min-height: 48px; padding: 6px 9px; font-size: .9rem; }
+  .compact-layout .options-list { gap: 7px; }
+  .compact-layout .reaction { margin-top: 8px; padding: 8px; }
+  .compact-layout .reaction p { font-size: .8rem; line-height: 1.6; }
+  .compact-layout .question-actions { margin-top: 8px; }
+  .compact-layout .progress-wrap { margin-bottom: 8px; }
+  .compact-layout .confession-content { padding: 14px 16px; }
+  .compact-layout .confession-line { margin-block: 6px; font-size: .95rem; line-height: 1.7; }
+  .compact-layout .ending-cat { width: 42px; height: 42px; margin-bottom: 6px; }
+  .compact-layout .love-declaration { margin-block: 8px; padding-block: 8px; }
 }
 .typed-line { display: grid; }
 .typed-line > span { grid-area: 1 / 1; }

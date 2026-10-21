@@ -294,11 +294,13 @@ export default function App() {
     const fit = () => {
       if (!window.matchMedia('(max-width: 699px)').matches) {
         content.style.removeProperty('scale')
+        screen.classList.remove('compact-layout')
         return
       }
       const styles = getComputedStyle(screen)
       const available = screen.clientHeight - parseFloat(styles.paddingTop) - parseFloat(styles.paddingBottom)
-      content.style.scale = String(Math.min(1, available / Math.max(content.offsetHeight + 8, 1)))
+      content.style.removeProperty('scale')
+      if (content.offsetHeight > available) screen.classList.add('compact-layout')
     }
     const observer = new ResizeObserver(fit)
     observer.observe(content)
